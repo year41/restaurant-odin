@@ -12,12 +12,12 @@ function Home() {
     const hoursDiv = document.createElement("div");
     const hoursTitle = document.createElement("h2");
     const hoursList = document.createElement("ul");
-    const daysWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-    for (let i = 0; i < 7; i++) {
+
+    const addSchedule = (day, times) => {
         const hoursItem = document.createElement("li");
         hoursList.append(hoursItem);
-        hoursItem.textContent = daysWeek[i] + " " + "11:00 - 23:00"
-    }
+        hoursItem.textContent = day + " " + times;
+    };
 
     titleDiv.classList.toggle("title-div");
     titleName.classList.toggle("title");
@@ -37,6 +37,13 @@ function Home() {
     aboutText.textContent = "At Nonna Crush, we bring generations of Italian family tradition to the table with handmade pizzas crafted from fresh local ingredients, house-made dough, and recipes inspired by mothers and grandmothers whose cooking was built on simplicity, warmth, and real flavour. More than pizza — it's generations in the making."
 
     hoursTitle.textContent = "Hours";
+    addSchedule("Monday", "12:00 - 21:00");
+    addSchedule("Tuesday", "12:00 - 21:00");
+    addSchedule("Wednesday", "12:00 - 22:00");
+    addSchedule("Thursday", "12:00 - 23:00");
+    addSchedule("Friday", "11:00 - 00:00");
+    addSchedule("Saturday", "10:00 - 23:00");
+    addSchedule("Sunday", "11:00 - 21:00");
 }
 
 export { Home };
