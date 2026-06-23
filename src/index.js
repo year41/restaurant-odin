@@ -1,5 +1,6 @@
 import { Home } from "./home.js";
 import { Menu } from "./menu.js";
+import { Contact } from "./contact.js";
 
 const content = document.getElementById("content");
 const homeBtn = document.querySelector(".home-btn");
