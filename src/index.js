@@ -1,5 +1,25 @@
-import home from "./home.js"
+import { Home } from "./home.js";
+import { Menu } from "./menu.js";
 
-// const content = document.getElementById("content");
+const content = document.getElementById("content");
+const homeBtn = document.querySelector(".home-btn");
+const menuBtn = document.querySelector(".menu-btn");
+const contactBtn = document.querySelector(".contact-btn");
 
-// content.textContent = home;
+homeBtn.addEventListener('click', () => {
+    content.textContent = "";
+    Home();
+});
+
+menuBtn.addEventListener('click', () => {
+    content.textContent = "";
+    Menu();
+});
+
+contactBtn.addEventListener('click', () => {
+    content.textContent = "";
+    Contact();
+});
+
+content.textContent = "";
+Home();
