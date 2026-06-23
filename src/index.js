@@ -1,6 +1,5 @@
-import { home } from "./home.js"
+import home from "./home.js"
 
-const content = document.getElementById("content");
+// const content = document.getElementById("content");
 
-content.textContent = home;
-console.log("Restaurant")
+// content.textContent = home;
