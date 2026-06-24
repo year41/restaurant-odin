@@ -1,11 +1,12 @@
+import "./styles.css";
 import { Home } from "./home.js";
 import { Menu } from "./menu.js";
 import { Contact } from "./contact.js";
 
 const content = document.getElementById("content");
-const homeBtn = document.querySelector(".home-btn");
-const menuBtn = document.querySelector(".menu-btn");
-const contactBtn = document.querySelector(".contact-btn");
+const homeBtn = document.querySelector(".home");
+const menuBtn = document.querySelector(".menu");
+const contactBtn = document.querySelector(".contact");
 
 homeBtn.addEventListener('click', () => {
     content.textContent = "";
