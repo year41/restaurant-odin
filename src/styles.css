@@ -57,7 +57,7 @@ body {
     word-spacing: 1px;
 }
 
-.about-div{
+.about-div {
     margin: 30px 0;
     padding: 20px 100px 35px;
     background-color: var(--bg-divs);
@@ -71,4 +71,29 @@ body {
     margin: 0 220px 10px;
     font-size: 30px;
     border-bottom: solid 3px var(--bg-color);
+}
+
+.about-div p {
+    line-height: 1.3;
+    letter-spacing: 0.4px;
+}
+
+.hours-div {
+    padding: 20px;
+    background-color: var(--bg-divs);
+    border-radius: 3px;
+    color: var(--text-color);
+    word-spacing: 2px;
+}
+
+.hours-div h2 {
+    margin: 0 325px 10px;
+    font-size: 30px;
+    border-bottom: solid 3px var(--bg-color);
+}
+
+.hours-div ul {
+    list-style-type: none;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
 }
