@@ -23,6 +23,7 @@ function Home() {
     titleName.classList.toggle("title");
     slogan.classList.toggle("slogan");
     aboutDiv.classList.toggle("about-div");
+    aboutTitle.classList.toggle("about-title");
     hoursDiv.classList.toggle("hours-div");
 
     content.append(titleDiv, aboutDiv, hoursDiv);
