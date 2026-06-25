@@ -1,7 +1,9 @@
 :root {
     --bg-color: #f4e7d3;
-    --br-btn: #a3b18a;
-    --text-color: #2b2b2b;
+    --border-color: #a3b18a;
+    --bg-divs: #b23a2e;
+    --btn-text-color: #2b2b2b;
+    --text-color: #e5e5e5;
 }
 
 * {
@@ -21,12 +23,36 @@ body {
     font-size: 16px;
     font-weight: bold;
     background-color: transparent;
-    color: var(--text-color);
-    border: solid 1px var(--text-color);
+    color: var(--btn-text-color);
+    border: solid 1px var(--btn-text-color);
     border-radius: 5px;
     cursor: pointer;
 }
 
 .btn:hover {
-    background-color: var(--br-btn);
+    background-color: var(--border-color);
+}
+
+#content {
+    width: 800px;
+    margin: auto;
+}
+
+.title-div {
+    padding: 20px 110px 35px;
+    background-color: var(--bg-divs);
+    color: var(--text-color);
+    border: solid 5px var(--border-color);
+    border-radius: 3px;
+}
+
+.title {
+    margin-bottom: 2px;
+    font-size: 60px;
+    border-bottom: solid 3px var(--bg-color);
+    word-spacing: 4px;
+}
+
+.slogan {
+    word-spacing: 1px;
 }
