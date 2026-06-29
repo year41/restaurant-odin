@@ -24,6 +24,7 @@ contactBtn.addEventListener('click', () => {
 });
 
 content.textContent = "";
-Home();
+// Home();
 
+Menu()
 // Contact()
