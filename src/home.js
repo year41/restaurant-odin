@@ -1,3 +1,6 @@
+import contactImg from "./img/contact.png";
+import { Contact } from "./contact.js";
+
 function Home() {
     const content = document.getElementById("content");
 
@@ -13,6 +16,10 @@ function Home() {
     const hoursTitle = document.createElement("h2");
     const hoursList = document.createElement("ul");
 
+    const imgDiv = document.createElement("div");
+    const imgButton = document.createElement("button");
+    const img = document.createElement("img");
+
     const addSchedule = (day, times) => {
         const hoursItem = document.createElement("li");
         hoursList.append(hoursItem);
@@ -25,17 +32,21 @@ function Home() {
     aboutDiv.classList.toggle("about-div");
     aboutTitle.classList.toggle("about-title");
     hoursDiv.classList.toggle("hours-div");
+    imgDiv.classList.toggle("img-div");
+    imgButton.classList.toggle("img-btn");
 
-    content.append(titleDiv, aboutDiv, hoursDiv);
+    content.append(titleDiv, aboutDiv, hoursDiv, imgDiv);
     titleDiv.append(titleName, slogan);
     aboutDiv.append(aboutTitle, aboutText);
     hoursDiv.append(hoursTitle, hoursList);
+    imgDiv.append(imgButton);
+    imgButton.append(img);
 
     titleName.textContent = "Nonna Crust";
-    slogan.textContent = "More than pizza, it's generations in the making."
+    slogan.textContent = "More than pizza, it's generations in the making.";
 
     aboutTitle.textContent = "About Us";
-    aboutText.textContent = "At Nonna Crush, we bring generations of Italian family tradition to the table with handmade pizzas crafted from fresh local ingredients, house-made dough, and recipes inspired by mothers and grandmothers whose cooking was built on simplicity, warmth, and real flavour. More than pizza — it's generations in the making."
+    aboutText.textContent = "At Nonna Crush, we bring generations of Italian family tradition to the table with handmade pizzas crafted from fresh local ingredients, house-made dough, and recipes inspired by mothers and grandmothers whose cooking was built on simplicity, warmth, and real flavour. More than pizza — it's generations in the making.";
 
     hoursTitle.textContent = "Hours";
     addSchedule("Monday", "12:00 - 21:00");
@@ -45,6 +56,14 @@ function Home() {
     addSchedule("Friday", "11:00 - 00:00");
     addSchedule("Saturday", "10:00 - 23:00");
     addSchedule("Sunday", "11:00 - 21:00");
+
+    img.src = contactImg;
+    img.alt = "Contact image link to contact page.";
+
+    imgButton.addEventListener('click', () => {
+        content.textContent = "";
+        Contact();
+    });
 }
 
 export { Home };
