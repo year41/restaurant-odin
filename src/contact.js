@@ -1,3 +1,8 @@
+import luciana from "./img/luci.png";
+import marco from "./img/marco.png";
+import elia from "./img/elia.png";
+import contactImg from "./img/contact.png";
+
 function Contact() {
     const content = document.querySelector("#content");
 
@@ -8,20 +13,23 @@ function Contact() {
     const contactDiv = document.createElement("div");
     const contactHeader = document.createElement("h2");
 
-    const addContact = (contact, intro, email) => {
+    const addContact = (contact, intro, photo, email) => {
         const contactItem = document.createElement("div");
         const contactName = document.createElement("h4");
         const contactDesc = document.createElement("p");
         const contactEmail = document.createElement("p");
+        const contactPhoto = document.createElement("img");
 
         contactItem.classList.toggle("contact");
+        contactEmail.classList.toggle("email");
 
         contactDiv.append(contactItem);
-        contactItem.append(contactName, contactDesc, contactEmail);
+        contactItem.append(contactName, contactDesc, contactEmail, contactPhoto);
 
         contactName.textContent = contact;
         contactDesc.textContent = intro;
         contactEmail.textContent = email;
+        contactPhoto.src = photo;
     };
 
     titleDiv.classList.toggle("title-div");
@@ -41,15 +49,15 @@ function Contact() {
     contactHeader.textContent = "Our People";
     addContact("Luciana Bellori",
         "A lifelong collector of family recipes and traditions, Luciana spent decades learning handmade Italian cooking from mothers and grandmothers across generations, inspiring the heart and soul behind Nonna Crush.",
-        "nonna@nonnacrust.com");
+        luciana, "nonna@nonnacrust.com");
     addContact("Marco Bellori",
-        "Luciana’s son, Marco, turned his mother’s dream into reality by building a warm and welcoming space where people can gather to share authentic pizza, family traditions, and great food.",
-        "admin@nonnacrust.com");
+        "Luciana's son, Marco, turned his mother's dream into reality by building a warm and welcoming space where people can gather to share authentic pizza, family traditions, and great food.",
+        marco, "admin@nonnacrust.com");
     addContact("Elia Romano",
         "Trained alongside Luciana, Elia combines traditional Italian techniques with a deep passion for handmade food, bringing warmth, creativity, and honest flavours to every pizza served at Nonna Crush.",
-        "kitchen@nonnacrust.com");
+        elia, "kitchen@nonnacrust.com");
     addContact("General Enquires",
-        "",
+        "", contactImg,
         "contact@nonnacrust.com");
 };
 

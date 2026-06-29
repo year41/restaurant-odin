@@ -42,7 +42,7 @@ body {
     padding: 20px 110px 35px;
     background-color: var(--bg-divs);
     color: var(--text-color);
-    border: solid 5px var(--border-color);
+    border: solid 3px var(--border-color);
     border-radius: 3px;
 }
 
@@ -145,4 +145,39 @@ body {
 
 .menu-div img {
     margin-bottom: 20px;
+}
+
+.contact-div {
+    margin: 30px 0;
+    padding: 20px 100px 35px;
+    background-color: var(--bg-divs);
+    border: solid 3px var(--border-color);
+    border-radius: 3px;
+    color: var(--text-color);
+    word-spacing: 2px;
+}
+
+.contact-header {
+    margin: 0 220px 20px;
+    font-size: 30px;
+    border-bottom: solid 3px var(--bg-color);
+}
+
+.contact-div div {
+    margin-top: 40px;
+}
+
+.contact-div h4 {
+    font-size: 18px;
+}
+
+.contact-div p {
+    margin: 5px 0;
+    line-height: 1.3;
+    letter-spacing: 0.4px;
+}
+
+.email {
+    padding: 5px;
+    font-weight: 600;
 }
